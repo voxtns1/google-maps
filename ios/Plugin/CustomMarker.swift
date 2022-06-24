@@ -10,8 +10,8 @@ class CustomMarker: GMSMarker {
         let latitude = position["latitude"] as? Double ?? 0.0;
         let longitude = position["longitude"] as? Double ?? 0.0;
 
-        let url = preferences["iconUrl"] as? String ?? nil;
         let preferences = markerData["preferences"] as? JSObject ?? JSObject();
+        let url = preferences["iconUrl"] as? String ?? nil;
         
         self.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude);
         
