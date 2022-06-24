@@ -42,7 +42,8 @@ class CustomMarker: GMSMarker {
         var imageData: Data?;
 
         if url != nil {
-            imageData = try? Data(contentsOf: url)
+            let urlData = URL(string: url!)
+            imageData = try? Data(contentsOf: urlData!)
         }
 
         if imageData != nil {
