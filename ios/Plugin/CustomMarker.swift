@@ -47,7 +47,8 @@ class CustomMarker: GMSMarker {
         }
 
         if imageData != nil {
-            self.icon = UIImage(data: imageData!)
+            let iconImage = UIImage(data: imageData!)
+            self.icon = iconImage?.resize(targetSize: CGSize(width: 55, height: 55))
         }
     }
     
